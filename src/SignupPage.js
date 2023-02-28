@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import {Input,Form ,Typography,Button} from 'antd';
 import './Card.css'
 import {MailOutlined, KeyOutlined, GooglePlusOutlined } from '@ant-design/icons'
-import {Link,useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { supabase } from './client'
 
-const LoginDirect= ({setToken}) => {
-    let navigate = useNavigate();
+function SignupPage() {
+   
     const [formData, setFormData] = useState({
         email:"",
         password: "",
@@ -27,22 +27,15 @@ const LoginDirect= ({setToken}) => {
 }
 const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    try {
-    const { data, error } = await supabase.auth.signInWithPassword({
+    try{
+    const { data, error } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
-        })
-        if (error) throw error
-        console.log(data)
-        setToken(data)
-        navigate('/landing')
-       
-} catch (error) {
-  alert (error)
-}
-}
-
+      })
+      alert('Check your email for verification Link, if no link was send then try again.')
+}catch (error) {
+  alert(error)
+}}
 async function signInWithGoogle() {
 //eslint-disable-next-line
   const { data, session, error } = await supabase.auth.signInWithOAuth({
@@ -56,10 +49,11 @@ async function signInWithGoogle() {
     <div className='main'>
         <Form className='LoginForm'  onSubmitCapture={handleSubmit}>
             <div>
-            <Link to='/'><Typography.Title className='welcome' style={{color: 'darkblue' }}>MEDVA</Typography.Title>
+           
+                <Link to='/'><Typography.Title className='welcome' style={{color: 'darkblue' }}>MEDVA</Typography.Title>
                 <h6>Medical Virtual Assistants</h6></Link>
             </div>
-                <h5> Login you your Account</h5>
+                <h5> Sign up now.</h5>
             <Form.Item 
                  rules={[
                     { 
@@ -76,8 +70,8 @@ async function signInWithGoogle() {
                     {min: 6}]} >
             <Input.Password className='allwidth' onChange={handleChange} placeholder='Your password' prefix={<KeyOutlined />} name='password' />
             </Form.Item>
-                <Button size='medium' className='loginBtn '  htmlType='Submit'  block>
-                    Login
+                <Button size='medium' className='loginBtn ' type='Submit'  htmlType='Submit'  block>
+                    Signup
                 </Button>
                 <Button size='medium' className='signupBtn '  onClick={signInWithGoogle}  block>
                 <GooglePlusOutlined className='googlelogo' /> Log in using google
@@ -88,4 +82,4 @@ async function signInWithGoogle() {
     )
 }
 
-export default LoginDirect
+export default SignupPage

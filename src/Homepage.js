@@ -14,7 +14,7 @@ function Homepage() {
             </div>
             <div className='rightNav'>  
                 <Space>
-                    <Link to='/Login'><Button size='medium' className='btn1' ><h5>Signup</h5></Button></Link>
+                    <Link to='/signup'><Button size='medium' className='btn1' ><h5>Signup</h5></Button></Link>
                     <Link to='/Login'><Button size='medium' type="primary" className='btn2'><h5>Login</h5></Button></Link>
                 </Space>
             </div>
