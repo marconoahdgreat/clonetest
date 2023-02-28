@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/clonetest/static/css/main.cff0eba6.css",
+    "main.js": "/clonetest/static/js/main.958350a6.js",
+    "index.html": "/clonetest/index.html",
+    "main.cff0eba6.css.map": "/clonetest/static/css/main.cff0eba6.css.map",
+    "main.958350a6.js.map": "/clonetest/static/js/main.958350a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cff0eba6.css",
+    "static/js/main.958350a6.js"
+  ]
+}
