@@ -6,7 +6,7 @@ const Loadingbtn = ({title , loading, onClick}) => {
   return (
     <Button className='lodBtn' onClick={onClick} type="Submit" htmlType='Submit' block>
         {
-            loading ? <Button/>  : title
+            loading ? <Spin/> : title
         }
     </Button>
   

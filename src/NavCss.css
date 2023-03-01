@@ -11,6 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
   align-items: center;
+height: 45px;
 
    border-bottom-style: ridge;
    border-bottom-color: rgba(255, 255, 255, 0.507);
@@ -33,11 +34,13 @@ header {
     font-weight:10px;
 }
 .profimage{
+
   border-radius: 100px;
   width: 30px;
   border-style: ridge;
   border-color: darkblue;
   border-width: thin;
+ margin-left: -8px;
 }
 
 .logoutlogo {
