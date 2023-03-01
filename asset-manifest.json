@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/clonetest/static/css/main.cbc35a0c.css",
-    "main.js": "/clonetest/static/js/main.a2a7e98c.js",
+    "main.css": "/clonetest/static/css/main.1660ad3e.css",
+    "main.js": "/clonetest/static/js/main.3e7d59b9.js",
     "index.html": "/clonetest/index.html",
-    "main.cbc35a0c.css.map": "/clonetest/static/css/main.cbc35a0c.css.map",
-    "main.a2a7e98c.js.map": "/clonetest/static/js/main.a2a7e98c.js.map"
+    "main.1660ad3e.css.map": "/clonetest/static/css/main.1660ad3e.css.map",
+    "main.3e7d59b9.js.map": "/clonetest/static/js/main.3e7d59b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbc35a0c.css",
-    "static/js/main.a2a7e98c.js"
+    "static/css/main.1660ad3e.css",
+    "static/js/main.3e7d59b9.js"
   ]
 }
