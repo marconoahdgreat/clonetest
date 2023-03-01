@@ -10,8 +10,8 @@ const LandingPage = ({token}) => {
   
  function handleLogout(){
     sessionStorage.removeItem('token')
-    navigate('/login')
-    
+    navigate('/Login')
+    window.location.reload()
   }
 
   

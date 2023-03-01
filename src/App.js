@@ -5,8 +5,10 @@ import Homepage from './Homepage'
 import LoginDirect from './LoginDirect'
 import LandingPage from './LandingPage'
 import SignupPage from './SignupPage'
+import PrivateRoutes from './PrivateRoutes'
 
 function App() {
+
   const [token, setToken] = useState(false)
 
     if(token){
@@ -19,15 +21,19 @@ function App() {
         setToken(data)
       }
     }, [])
-  
-  
+
+ 
     return (
     <div>
       
      <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route element={<PrivateRoutes />}>
+          <Route path="/landing" element={<LandingPage token={token}/>} />
+        </Route>
         <Route path="/Login" element={<LoginDirect setToken={setToken}/>} />
-        {token? <Route path="/landing" element={<LandingPage token={token}/>} /> : ""}
+        <Route path="/" element={<Homepage />} />
+        
+        
         <Route path="/signup" element={<SignupPage/>} />
 
      </Routes>
