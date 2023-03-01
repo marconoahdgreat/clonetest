@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
-import {Input,Form ,Typography,Button} from 'antd';
+import {Input,Form ,Typography,Button, Popover} from 'antd';
 import './Card.css'
 import {MailOutlined, KeyOutlined, GooglePlusOutlined } from '@ant-design/icons'
 import {Link} from 'react-router-dom'
 import { supabase } from './client'
+import Loadingbtn from './Loadingbtn';
+import Notif from './Notif';
 
 function SignupPage() {
-   
+   const [loading,setLoading]= useState(false)
     const [formData, setFormData] = useState({
         email:"",
         password: "",
@@ -47,7 +49,8 @@ async function signInWithGoogle() {
  
   return (
     <div className='main'>
-        <Form className='LoginForm'  onSubmitCapture={handleSubmit}>
+      
+        <Form className='LoginForm'  onSubmitCapture={handleSubmit}>  <Notif />
             <div>
            
                 <Link to='/'><Typography.Title className='welcome' style={{color: 'darkblue' }}>MEDVA</Typography.Title>
@@ -70,13 +73,20 @@ async function signInWithGoogle() {
                     {min: 6}]} >
             <Input.Password className='allwidth' onChange={handleChange} placeholder='Your password' prefix={<KeyOutlined />} name='password' />
             </Form.Item>
-                <Button size='medium' className='loginBtn ' type='Submit'  htmlType='Submit'  block>
-                    Signup
-                </Button>
-                <Button size='medium' className='signupBtn '  onClick={signInWithGoogle}  block>
+            <Loadingbtn title={'Sign up'} loading={loading} onClick={() => {
+                setLoading(true)
+                setTimeout(()=>{
+                    setLoading(false)
+                }, 2000)
+              }} />
+                <Popover placement="bottom" content='Not working for the moment , Sign up using Email and Password.'><Button  disabled size='medium' className='signupBtn '  onClick={signInWithGoogle}  block>
                 <GooglePlusOutlined className='googlelogo' /> Log in using google
-                </Button>
+                </Button></Popover>
                 <Link to="/"><center className='fpass'>Forgot password?</center></Link>
+
+
+
+               
            </Form>
     </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavCss.css'
-import {Button, Space,Popconfirm} from 'antd'
+import {Button, Space,Popconfirm, Popover} from 'antd'
 import {useNavigate} from 'react-router-dom'
 import {LogoutOutlined } from '@ant-design/icons'
 
@@ -11,20 +11,24 @@ const LandingPage = ({token}) => {
  function handleLogout(){
     sessionStorage.removeItem('token')
     navigate('/login')
+    
   }
 
   
   return (
+    
     <div>
        <header>
             <div className='leftNav'>
-                <h2>MEDVA</h2>
+              <Popover placement="bottomRight" title='MEDVA' content='Medical Virtual Assistant' >
+                 <h2>MEDVA</h2>
+              </Popover>
             </div>
             <div className='rightNav'>  
              
                 <Space>
                     <p>Welcome , {token.user.email} </p>
-                    <Popconfirm
+                    <Popover  placement="bottom" content='Logout?'><Popconfirm
                  className='logoutlogo'
                       placement="rightTop"
                       title='Are you sure you want to logout?'
@@ -32,7 +36,7 @@ const LandingPage = ({token}) => {
                       onConfirm={handleLogout}
                       okText="Yes"
                       cancelText="No"
-      ><Button><LogoutOutlined /></Button></Popconfirm>
+      ><Button><LogoutOutlined /></Button></Popconfirm></Popover>
                   </Space>
             </div>
       </header>

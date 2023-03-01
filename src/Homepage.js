@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavCss.css'
-import {Button, Space} from 'antd'
+import {Button, Popover, Space} from 'antd'
 
 import {Link} from 'react-router-dom'
 
@@ -10,7 +10,7 @@ function Homepage() {
     <div>
        <header>
             <div className='leftNav'>
-                <h2>MEDVA</h2>
+                <Popover placement="bottom" content='Your Medical Virtual Assistant'><h2>MEDVA</h2></Popover>
             </div>
             <div className='rightNav'>  
                 <Space>
