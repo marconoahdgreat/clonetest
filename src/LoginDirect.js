@@ -5,6 +5,7 @@ import {MailOutlined, KeyOutlined, GooglePlusOutlined } from '@ant-design/icons'
 import {Link,useNavigate} from 'react-router-dom'
 import { supabase } from './client'
 import Loadingbtn from './Loadingbtn';
+import {motion} from 'framer-motion'
 
 const LoginDirect= ({setToken}) => {
     let navigate = useNavigate();
@@ -62,8 +63,9 @@ async function signInWithGoogle() {
     
   
   
-    return (
+    return ( <motion.div animate={{ rotate : 360}}>
     <div className='main'>
+       
         <Form className='LoginForm'  onSubmitCapture={handleSubmit}>
             <div>
             <Link to='/'><Typography.Title className='welcome' style={{color: 'darkblue' }}><Popover placement="right" content='return to mainpage' >MEDVA</Popover></Typography.Title>
@@ -100,7 +102,8 @@ async function signInWithGoogle() {
                 <Link to="/"><center className='fpass'>Forgot password?</center></Link>
            
            </Form>
-    </div>
+         
+    </div>  </motion.div>
     )
 }
 

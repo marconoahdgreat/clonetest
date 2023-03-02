@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 import { supabase } from './client'
 import Loadingbtn from './Loadingbtn';
 import Notif from './Notif';
+import {motion} from 'framer-motion'
 
 function SignupPage() {
    const [loading,setLoading]= useState(false)
@@ -48,6 +49,7 @@ async function signInWithGoogle() {
     })}
  
   return (
+    <motion.div animate={{ rotate : 360}}>
     <div className='main'>
       
         <Form className='LoginForm'  onSubmitCapture={handleSubmit}>  <Notif />
@@ -89,6 +91,7 @@ async function signInWithGoogle() {
                
            </Form>
     </div>
+    </motion.div>
     )
 }
 
