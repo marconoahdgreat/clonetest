@@ -170,6 +170,10 @@ width: 100%;
   font-size: 12px;
 
 }
+.leftproject{
+  column-width: 300px;
+  font-size: 10px;
+}
 }
 @media (max-width : 1000px )and (min-width: 551px) {
 
@@ -183,29 +187,6 @@ width: 100%;
    border-bottom-style: ridge;
    border-bottom-color: rgba(255, 255, 255, 0.507);
 border-width: 100%;
-}
-.rightNav{
-  margin: 10px 20px 10px 0;
-
-  }
-  .leftNav{
-    margin:10px 0px 10px 20px;
-    color: rgb(11, 11, 139);
-    }
-    
-}
-@media (max-width :1300px )and (min-width: 1001px) {
-
-  header{
- 
-    display: flex;
-    justify-content: space-between;
-  align-items: center;
-height: 45px;
-width: 100%;
-   border-bottom-style: ridge;
-   border-bottom-color: rgba(255, 255, 255, 0.507);
-
 }
 .rightNav{
   margin: 10px 20px 10px 0;
