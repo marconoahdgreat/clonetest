@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 
 import DropMenu from './DropMenu'
 import Cardsss from './Cardsss'
+import logoo from './images/logoo.webp'
 
 
 const LandingPage = ({token}) => {
@@ -30,7 +31,7 @@ const LandingPage = ({token}) => {
             <div className='rightNav'>  
  
                 <Space>
-                  <DropMenu phar={token.user.identities[1].identity_data.name} imgSrc={token.user.identities[1].identity_data.picture} logout={handleLogout}/>
+                  <DropMenu phar={token.user.email} imgSrc={logoo} logout={handleLogout}/>
                 </Space>
            
             </div>

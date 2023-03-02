@@ -4,6 +4,7 @@ import {  useNavigate } from 'react-router-dom';
 import './Card.css'
 
 
+
 const DropMenu = (props) => {
 const navigate = useNavigate()
 
@@ -53,7 +54,7 @@ return (
   >
     <a onClick={(e) => e.preventDefault()}>
       <Space>
-      <p className='rspnsvName'>Welcome, {props.phar}</p><img className='profimage' src={props.imgSrc} />
+      <p className='rspnsvName'>Welcome, {props.phar}</p><img className={'profimage'} src={props.imgSrc} />
       </Space>
     </a>
   </Dropdown>

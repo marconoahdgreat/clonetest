@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import './NavCss.css'
 import TableF from './TableF'
 import {motion} from 'framer-motion'
+import logoo from './images/logoo.webp'
 
 
 const Invoices = ({token}) => {
@@ -26,7 +27,7 @@ const Invoices = ({token}) => {
             <div className='rightNav'>  
  
                 <Space>
-                  <DropMenu phar={token.user.identities[1].identity_data.name} imgSrc={token.user.identities[1].identity_data.picture} logout={handleLogout}/>
+                <DropMenu phar={token.user.email} imgSrc={logoo} logout={handleLogout}/> 
                 </Space>
             </div>
           

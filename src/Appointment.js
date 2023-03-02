@@ -6,6 +6,7 @@ import './NavCss.css'
 import {ScheduleOutlined} from '@ant-design/icons'
 import logo from './images/appoints.png'
 import {motion} from 'framer-motion'
+import logoo from './images/logoo.webp'
 
 const Appointment = ({token}) => {
   let navigate= useNavigate()
@@ -28,7 +29,7 @@ const Appointment = ({token}) => {
             <div className='rightNav'>  
  
                 <Space>
-                  <DropMenu phar={token.user.identities[1].identity_data.name} imgSrc={token.user.identities[1].identity_data.picture} logout={handleLogout}/>
+                <DropMenu phar={token.user.email} imgSrc={logoo} logout={handleLogout}/>
                 </Space>
             </div>
          
