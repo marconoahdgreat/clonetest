@@ -2,7 +2,7 @@ import React from 'react'
 import './NavCss.css'
 import {Button, Popover, Space} from 'antd'
 import {Link} from 'react-router-dom'
-
+import Cardsss from './Cardsss'
 
 
 function Homepage() {
@@ -20,6 +20,7 @@ function Homepage() {
                 </Space>
             </div>
       </header>
+      <Cardsss />
     </div>
   )
 }

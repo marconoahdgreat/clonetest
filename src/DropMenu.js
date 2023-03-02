@@ -40,7 +40,7 @@ const items =  [
     label: <div onClick={props.logout}>'Logout'</div>,
     key: '6',
     danger: true,
-    size: 'small'
+  
   },
 ];
 return (

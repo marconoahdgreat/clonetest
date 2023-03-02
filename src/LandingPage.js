@@ -4,6 +4,7 @@ import { Space,Popover} from 'antd'
 import {useNavigate} from 'react-router-dom'
 
 import DropMenu from './DropMenu'
+import Cardsss from './Cardsss'
 
 
 const LandingPage = ({token}) => {
@@ -31,9 +32,9 @@ const LandingPage = ({token}) => {
                 <Space>
                   <DropMenu phar={token.user.identities[1].identity_data.name} imgSrc={token.user.identities[1].identity_data.picture} logout={handleLogout}/>
                 </Space>
-            
+           
             </div>
-      </header>
+      </header> <Cardsss />
     </div>
   )
 }
