@@ -40,7 +40,7 @@ height: 45px;
   border-style: ridge;
   border-color: darkblue;
   border-width: thin;
- margin-left: -8px;
+ margin-left: 3px;
 }
 
 .logoutlogo {
@@ -69,4 +69,48 @@ backdrop-filter: blur(3px);
   color: white;
   background-color: darkblue;
  
+}
+.InvoicesName{
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+ 
+  
+}
+
+
+.Msg1{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+ 
+
+}
+.Msg2{
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+
+}
+.Tablef{
+  margin-top: 50px;
+}
+.leftproject{
+  margin-right: 400px;
+}
+.AppointLogo{
+  margin-top: 30px;
+ height: 20px;
+ display: flex;
+ justify-content: center;
+}
+.AppointLogo p {
+text-align: center;
+font-size: 15px;
 }

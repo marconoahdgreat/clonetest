@@ -1,7 +1,10 @@
 import { LogoutOutlined ,SettingOutlined, SearchOutlined, BookOutlined, UserAddOutlined, CalendarOutlined  } from '@ant-design/icons';
-import { Dropdown, message, Space } from 'antd';
+import { Dropdown,  Space } from 'antd';
+import {  useNavigate } from 'react-router-dom';
 
 const DropMenu = (props) => {
+const navigate = useNavigate()
+
 const items =  [
   {
    icon:<SearchOutlined />,
@@ -10,12 +13,12 @@ const items =  [
   },
   {
     icon:<CalendarOutlined />,
-    label: 'Appointments',
+    label: <div onClick={() => navigate('/appoint')}>Appointments</div>,
     key: '2',
   },
   {
     icon:<BookOutlined />,
-    label: 'Invoices',
+    label: <div onClick={() => navigate('/invoices')}>Invoices</div>,
     key: '3',
   },
   {
