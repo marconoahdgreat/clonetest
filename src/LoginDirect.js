@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Input,Form ,Typography,Button, Popover, } from 'antd';
 import './Card.css'
 import {MailOutlined, KeyOutlined, GooglePlusOutlined } from '@ant-design/icons'

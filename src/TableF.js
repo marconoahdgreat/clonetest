@@ -1,15 +1,16 @@
 import { Table } from 'antd';
+import './Card.css'
 const columns = [
   {
-    title: 'Actions',
+    title: <div className='titlTable'>Actions</div>,
  
   },
   {
-    title: 'Status',
+    title: <div className='titlTable'>Status</div>,
    
   },
   {
-    title: 'Invoice #',
+    title: <div className='titlTable'>Invoice #</div>,
    
   },
 
@@ -18,11 +19,11 @@ const columns = [
    
   },
   {
-    title: 'Due date',
+    title: <div className='titlTable'>Due date</div>,
    
   },
   {
-    title: 'amount',
+    title: <div className='titlTable'>amount</div>
     
   },
 ];
@@ -31,7 +32,7 @@ const columns = [
 const TableF = () => (
   <>
 
-    <Table style={{width: "90%" , marginLeft: "5%" }} columns={columns}  size="small" />
+    <Table className='tablez'  columns={columns}  size="small" />
 
   </>
 );

@@ -1,6 +1,7 @@
 import { LogoutOutlined ,SettingOutlined, SearchOutlined, BookOutlined, UserAddOutlined, CalendarOutlined  } from '@ant-design/icons';
 import { Dropdown,  Space } from 'antd';
 import {  useNavigate } from 'react-router-dom';
+import './Card.css'
 
 
 const DropMenu = (props) => {
@@ -39,19 +40,20 @@ const items =  [
     label: <div onClick={props.logout}>'Logout'</div>,
     key: '6',
     danger: true,
+    size: 'small'
   },
 ];
 return (
   
   <Dropdown 
     menu={{
-      items
-   
+      items,
+      size: 'small'
     }}
   >
     <a onClick={(e) => e.preventDefault()}>
       <Space>
-      <p style={{color: 'black'}}>Welcome, {props.phar}</p><img className='profimage' src={props.imgSrc} />
+      <p className='rspnsvName'>Welcome, {props.phar}</p><img className='profimage' src={props.imgSrc} />
       </Space>
     </a>
   </Dropdown>

@@ -28,6 +28,8 @@ function SignupPage() {
         })
 
 }
+
+
 const handleSubmit = async (e) => {
     e.preventDefault();
     try{
@@ -47,7 +49,7 @@ async function signInWithGoogle() {
    
     },
     })}
- 
+
   return (
     <motion.div animate={{ rotate : 360}}>
     <div className='main'>
@@ -78,8 +80,9 @@ async function signInWithGoogle() {
             <Loadingbtn title={'Sign up'} loading={loading} onClick={() => {
                 setLoading(true)
                 setTimeout(()=>{
-                    setLoading(false)
-                }, 2000)
+                setLoading(false)
+                  }, 2000)
+                  
               }} />
                 <Popover placement="bottom" content='Not working for the moment , Sign up using Email and Password.'><Button  disabled size='medium' className='signupBtn '  onClick={signInWithGoogle}  block>
                 <GooglePlusOutlined className='googlelogo' /> Log in using google

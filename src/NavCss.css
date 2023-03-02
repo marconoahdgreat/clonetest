@@ -120,3 +120,100 @@ font-size: 15px;
 .fixpos{
   position: fixed;
 }
+
+@media (max-width : 550px){
+header{
+ 
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+height: 45px;
+width: 100%;
+   border-bottom-style: ridge;
+   border-bottom-color: rgba(255, 255, 255, 0.507);
+}
+.profimage{
+
+  border-radius: 100px;
+  width: 30px;
+  border-style: ridge;
+  border-color: darkblue;
+  border-width: thin;
+ margin-left: 3px;
+ margin-top: 11px;
+}
+.InvoicesName{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+ 
+  
+}
+.Msg1{
+  margin-top: 40px;
+  
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+ 
+
+}
+.Msg2{
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+
+}
+}
+@media (max-width : 1000px )and (min-width: 551px) {
+
+  header{
+ 
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+height: 45px;
+width: 100%;
+   border-bottom-style: ridge;
+   border-bottom-color: rgba(255, 255, 255, 0.507);
+border-width: 100%;
+}
+.rightNav{
+  margin: 10px 20px 10px 0;
+
+  }
+  .leftNav{
+    margin:10px 0px 10px 20px;
+    color: rgb(11, 11, 139);
+    }
+    
+}
+@media (max-width :1300px )and (min-width: 1001px) {
+
+  header{
+ 
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+height: 45px;
+width: 100%;
+   border-bottom-style: ridge;
+   border-bottom-color: rgba(255, 255, 255, 0.507);
+
+}
+.rightNav{
+  margin: 10px 20px 10px 0;
+
+  }
+  .leftNav{
+    margin:10px 0px 10px 20px;
+    color: rgb(11, 11, 139);
+    }
+    
+}
