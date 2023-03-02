@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import './NavCss.css'
 import {ScheduleOutlined} from '@ant-design/icons'
 import logo from './images/appoints.png'
-
+import {motion} from 'framer-motion'
 
 const Appointment = ({token}) => {
   let navigate= useNavigate()
@@ -16,6 +16,7 @@ const Appointment = ({token}) => {
     window.location.reload()
   }
   return (
+   
     <div>
        <header>
             <div className='leftNav'>
@@ -30,7 +31,7 @@ const Appointment = ({token}) => {
                 </Space>
             </div>
         </header>
-
+ <motion.div animate={{y : 100}}>
         <div className='InvoicesName'>
         Your appointments
                 </div>
@@ -53,7 +54,9 @@ const Appointment = ({token}) => {
   </Card>
 
         </div>
+        </motion.div>
     </div>
+  
   )
 }
 
