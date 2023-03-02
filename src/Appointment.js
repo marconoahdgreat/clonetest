@@ -19,6 +19,7 @@ const Appointment = ({token}) => {
    
     <div>
        <header>
+       
             <div className='leftNav'>
               <Popover placement="bottomRight" title='MEDVA' content='Medical Virtual Assistant' >
                  <h2>MEDVA</h2>
@@ -30,8 +31,9 @@ const Appointment = ({token}) => {
                   <DropMenu phar={token.user.identities[1].identity_data.name} imgSrc={token.user.identities[1].identity_data.picture} logout={handleLogout}/>
                 </Space>
             </div>
+            
         </header>
- <motion.div animate={{y : 100}}>
+
         <div className='InvoicesName'>
         Your appointments
                 </div>
@@ -54,7 +56,7 @@ const Appointment = ({token}) => {
   </Card>
 
         </div>
-        </motion.div>
+     
     </div>
   
   )

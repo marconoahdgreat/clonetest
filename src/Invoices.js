@@ -4,7 +4,7 @@ import DropMenu from './DropMenu'
 import { useNavigate } from 'react-router-dom'
 import './NavCss.css'
 import TableF from './TableF'
-import {motion} from 'framer-motion'
+
 
 
 const Invoices = ({token}) => {
@@ -18,7 +18,7 @@ const Invoices = ({token}) => {
   return (
     <div>
        <header>
-            <div className='leftNav'>
+           <div className='leftNav'>
               <Popover placement="bottomRight" title='MEDVA' content='Medical Virtual Assistant' >
                  <h2>MEDVA</h2>
               </Popover>
@@ -29,8 +29,9 @@ const Invoices = ({token}) => {
                   <DropMenu phar={token.user.identities[1].identity_data.name} imgSrc={token.user.identities[1].identity_data.picture} logout={handleLogout}/>
                 </Space>
             </div>
+          
         </header>
-        <motion.div animate={{y : 100}}>
+       
         <div className='InvoicesName'>
                   Invoices
                 </div>
@@ -42,7 +43,7 @@ const Invoices = ({token}) => {
         <div className='Tablef'>
         <TableF/>
         </div>
-        </motion.div>
+        
     </div>
   )
 }
