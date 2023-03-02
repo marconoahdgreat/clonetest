@@ -4,7 +4,7 @@ import DropMenu from './DropMenu'
 import { useNavigate } from 'react-router-dom'
 import './NavCss.css'
 import TableF from './TableF'
-
+import {motion} from 'framer-motion'
 
 
 const Invoices = ({token}) => {
@@ -31,7 +31,7 @@ const Invoices = ({token}) => {
             </div>
           
         </header>
-       
+       <motion.div animate={{y : -30}}>
         <div className='InvoicesName'>
                   Invoices
                 </div>
@@ -43,8 +43,9 @@ const Invoices = ({token}) => {
         <div className='Tablef'>
         <TableF/>
         </div>
-        
+         </motion.div> 
     </div>
+   
   )
 }
 

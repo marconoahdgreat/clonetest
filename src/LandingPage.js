@@ -19,7 +19,7 @@ const LandingPage = ({token}) => {
 
   return (
     
-    <div>
+    <div className='fixpos'>
        <header>
             <div className='leftNav'>
               <Popover placement="bottomRight" title='MEDVA' content='Medical Virtual Assistant' >

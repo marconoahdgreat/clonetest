@@ -31,7 +31,7 @@ const columns = [
 const TableF = () => (
   <>
 
-    <Table columns={columns}  size="middle" />
+    <Table style={{width: "90%" , marginLeft: "5%" }} columns={columns}  size="small" />
 
   </>
 );

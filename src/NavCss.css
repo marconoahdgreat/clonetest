@@ -73,7 +73,7 @@ backdrop-filter: blur(3px);
 .InvoicesName{
   display: flex;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 50px;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 1px;
@@ -84,6 +84,7 @@ backdrop-filter: blur(3px);
 
 .Msg1{
   margin-top: 40px;
+  
   display: flex;
   justify-content: center;
   font-size: 15px;
@@ -102,15 +103,20 @@ backdrop-filter: blur(3px);
   margin-top: 50px;
 }
 .leftproject{
-  margin-right: 400px;
+  column-width: 300px;
 }
 .AppointLogo{
-  margin-top: 30px;
- height: 20px;
+  margin-top: 40px;
  display: flex;
  justify-content: center;
+ width: 80%;
+ margin-left: 10%;
 }
 .AppointLogo p {
 text-align: center;
 font-size: 15px;
+
+}
+.fixpos{
+  position: fixed;
 }
