@@ -3,6 +3,8 @@ import "./NavCss.css";
 import { Button, Popover, Space } from "antd";
 import { Link } from "react-router-dom";
 import Cardsss from "./Cardsss";
+import ModalCards from "./ModalCards";
+import CardData from "./Data.js";
 
 function Homepage() {
   return (
@@ -51,6 +53,11 @@ function Homepage() {
           <Cardsss title="Scribe" />
           <Cardsss title="Receptionist" />
         </div>
+      </div>
+      <div className="container">
+        <space>
+          <ModalCards details={CardData} />
+        </space>
       </div>
     </div>
   );

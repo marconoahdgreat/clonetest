@@ -167,8 +167,8 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 130px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.055);
     margin: 10px;
     margin-top: 20px;
@@ -183,11 +183,11 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 130px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.685);
     background-color: rgba(50, 50, 138, 0.048);
-    transition-delay: 0.2s;
+    transition-duration: 2s;
     box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
     backdrop-filter: blur(3px);
 
@@ -197,19 +197,19 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 130px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.685);
     background-color: rgba(50, 50, 138, 0.048);
-    transition-delay: 0.2s;
+    transition-duration: 2s;
     box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
     backdrop-filter: blur(3px);
     transform: scale(1.03);
   }
   .inactive {
     text-align: center;
-    width: 130px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.055);
     margin: 10px;
     margin-top: 20px;
@@ -243,117 +243,14 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 90%;
-    height: auto;
-    justify-content: space-around;
-    flex-flow: wrap;
-  }
-}
-@media (max-width: 1000px) and (min-width: 601px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45px;
-    width: 100%;
-    border-bottom-style: ridge;
-    border-bottom-color: rgba(255, 255, 255, 0.507);
-    border-width: 100%;
-  }
-  .rightNav {
-    margin: 10px 20px 10px 0;
-  }
-  .leftNav {
-    margin: 10px 0px 10px 20px;
-    color: rgb(11, 11, 139);
-  }
-  .wholecards {
-    display: flex;
-    justify-content: center;
-  }
-  .cardsprops img {
-    width: 70px;
-  }
-  .cardsprops {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 150px;
-    height: 190px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-  .cardsprops p {
-    width: 130px;
-    height: 170px;
-    font-weight: bold;
-  }
-  .cardsprops:hover {
-    border-color: rgba(0, 0, 255, 0.685);
-    background-color: rgba(50, 50, 138, 0.048);
-    transition-delay: 0.2s;
-    box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
-    backdrop-filter: blur(3px);
-    transform: scale(1.03);
-  }
-
-  .active {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 130px;
-
-    height: 170px;
-    border-color: rgba(0, 0, 255, 0.685);
-    background-color: rgba(50, 50, 138, 0.048);
-    transition-delay: 0.2s;
-    box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
-    backdrop-filter: blur(3px);
-    transform: scale(1.03);
-  }
-  .inactive {
-    text-align: center;
-    width: 130px;
-    height: 170px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-
-  .Checkcard {
-    color: darkblue;
-
-    margin-left: 80px;
-
-    transition-delay: 0.2s;
-  }
-  .inCheckcard {
-    color: white;
-    transition-delay: 0.5s;
-    margin-left: 80px;
-  }
-  .SpaceHome {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .Msg5 {
-    display: flex;
-    justify-content: center;
-    font-size: smaller;
-    font-weight: lighter;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     width: 100%;
     height: auto;
 
     flex-flow: wrap;
+    margin-bottom: 10px;
   }
 }
+
 @media (min-width: 1001px) {
   .LoginForm {
     background-color: rgba(255, 255, 255);
@@ -389,8 +286,8 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.055);
     margin: 10px;
     margin-top: 20px;
@@ -407,8 +304,8 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 150px;
-    height: 190px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.055);
     margin: 10px;
     margin-top: 20px;
@@ -421,7 +318,7 @@ header {
   .cardsprops:hover {
     border-color: rgba(0, 0, 255, 0.685);
     background-color: rgba(50, 50, 138, 0.048);
-    transition-delay: 0.2s;
+    transition-duration: 2s;
     box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
     backdrop-filter: blur(3px);
     transform: scale(1.03);
@@ -431,8 +328,8 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 130px;
-    height: 170px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.685);
     background-color: rgba(50, 50, 138, 0.048);
     transition-delay: 0.2s;
@@ -442,8 +339,8 @@ header {
   }
   .inactive {
     text-align: center;
-    width: 130px;
-    height: 170px;
+    width: 200px;
+    height: 300px;
     border-color: rgba(0, 0, 255, 0.055);
     margin: 10px;
     margin-top: 20px;
@@ -476,9 +373,11 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    width: 100%;
+    height: auto;
 
-    justify-content: space-around;
     flex-flow: wrap;
+    margin-bottom: 10px;
   }
 }
 .Msg3 {

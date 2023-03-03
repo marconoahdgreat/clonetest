@@ -2,10 +2,11 @@ import React from "react";
 import "./NavCss.css";
 import { Space, Popover } from "antd";
 import { useNavigate, Link } from "react-router-dom";
-
+import CardData from "./Data";
 import DropMenu from "./DropMenu";
 import Cardsss from "./Cardsss";
 import logoo from "./images/logoo.webp";
+import ModalCards from "./ModalCards";
 
 const LandingPage = ({ token }) => {
   let navigate = useNavigate();
@@ -50,7 +51,8 @@ const LandingPage = ({ token }) => {
         </p>
       </div>
 
-      <div className="SpaceHome">
+      <div className="Msg5">Which type of personnel do you need?</div>
+      <div className="SpaceHome ">
         <Space>
           <Cardsss title="Medical" />
           <Cardsss title="Dental" />
@@ -58,14 +60,20 @@ const LandingPage = ({ token }) => {
       </div>
       <div className="Msg5">Which type of personnel do you need?</div>
       <div className="SpaceHome">
-        <Space>
+        <div className="container">
           <Cardsss title="Admin" />
           <Cardsss title="Biller" />
-        </Space>
 
-        <Space>
           <Cardsss title="Scribe" />
           <Cardsss title="Receptionist" />
+        </div>
+      </div>
+      <p className="Msg2">
+        <b>Pick your future virtual assistant</b>
+      </p>
+      <div className="container">
+        <Space>
+          <ModalCards details={CardData} />
         </Space>
       </div>
     </div>
