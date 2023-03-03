@@ -1,7 +1,7 @@
 import React from 'react'
 import { Space,Popover,Card} from 'antd'
 import DropMenu from './DropMenu'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import './NavCss.css'
 import {ScheduleOutlined} from '@ant-design/icons'
 import logo from './images/appoints.png'
@@ -23,7 +23,7 @@ const Appointment = ({token}) => {
       
             <div className='leftNav'>
               <Popover placement="bottomRight" title='MEDVA' content='Medical Virtual Assistant' >
-                 <h2>MEDVA</h2>
+                 <Link to='/landing'><h2>MEDVA</h2></Link>
               </Popover>
             </div>
             <div className='rightNav'>  

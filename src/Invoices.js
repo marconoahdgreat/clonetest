@@ -1,7 +1,7 @@
 import React from 'react'
 import { Space,Popover} from 'antd'
 import DropMenu from './DropMenu'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import './NavCss.css'
 import TableF from './TableF'
 import {motion} from 'framer-motion'
@@ -21,7 +21,7 @@ const Invoices = ({token}) => {
        <header>
            <div className='leftNav'>
               <Popover placement="bottomRight" title='MEDVA' content='Medical Virtual Assistant' >
-                 <h2>MEDVA</h2>
+              <Link to='/landing'><h2>MEDVA</h2></Link>
               </Popover>
             </div>
             <div className='rightNav'>  
