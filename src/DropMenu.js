@@ -50,6 +50,7 @@ const DropMenu = (props) => {
   ];
   return (
     <Dropdown
+      className="Dropdrop"
       menu={{
         items,
         size: "small",
@@ -58,7 +59,7 @@ const DropMenu = (props) => {
       <a onClick={(e) => e.preventDefault()}>
         <Space>
           <p className="rspnsvName">Welcome, {props.phar}</p>
-          <img className={"profimage"} src={props.imgSrc} />
+          <img className="profimage" src={props.imgSrc} />
         </Space>
       </a>
     </Dropdown>

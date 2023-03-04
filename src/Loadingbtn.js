@@ -1,16 +1,18 @@
-import React from 'react'
-import { Button, Spin } from 'antd'
-import './NavCss.css'
+import React from "react";
+import { Button, Spin } from "antd";
+import "./NavCss.css";
 
-const Loadingbtn = ({title , loading, onClick}) => {
+const Loadingbtn = ({ title, loading, onClick }) => {
   return (
-    <Button className='lodBtn' onClick={onClick} type="Submit" htmlType='Submit' block>
-        {
-            loading ? <Spin/> : title
-        }
+    <Button
+      className="lodBtn"
+      onClick={onClick}
+      type="Submit"
+      htmlType="Submit"
+    >
+      {loading ? <Spin /> : title}
     </Button>
-  
-)
-}
+  );
+};
 
-export default Loadingbtn
+export default Loadingbtn;

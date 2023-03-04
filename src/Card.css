@@ -1,116 +1,74 @@
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    }
-
-.welcome{
-    display: flex;
-    justify-content: center;
-   }
-h6{
-    display: flex;
-    justify-content: center;
-    color: darkblue;
-    position: relative;
-    bottom: 25px;
-    }
-h5{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-.loginBtn{
-    margin-bottom: 10px;
-    background-color: darkblue;
-    color: whitesmoke;
-    border-color:darkblue ;
-  }
-  .signupBtn{
-    margin-bottom: 10px;
-   border-color: darkblue;
-   color: darkblue;
-  }
-.googlelogo{
-    position: absolute;
-    top: 8px;
-   left: 3px;
-    width: 30px;
-    height: 30px;
-   }
-.fpass{
-
-  padding-top: 20px;
-    font-size: small;
-}
-.allwidth{
-    width: 270px;
-}
-.rspnsvName{
-  color: black;
-}
-@media (max-width : 550px){
- .main{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -90px;
 }
 .LoginForm {
-  background-color: rgba(255, 255, 255,);
-  box-shadow: 0px 8px 32px 0 rgba(33, 27, 87, 0.192);
-  backdrop-filter: blur(3px);
-  padding: 45px 40px 70px 40px;
-  border-radius: 5px;
-  width: 95%;
-  }
-  .rspnsvName{
-    color: white;
-  }
-  .tablez{
-  width: 90%;
-font-size: 10px;
-margin-left: 5%;
-  }
-.titlTable{
-  font-size: 10px;
+  border-style: ridge;
+  border-radius: 10px;
+  border-color: rgba(105, 105, 105, 0.048);
+  width: 350px;
+  height: 500px;
+  margin-top: 60px;
 }
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: darkblue;
+  letter-spacing: 12px;
+  font-weight: bolder;
+  margin-top: 30px;
 }
-  @media (max-width : 1000px )and (min-width: 551px) {
-    .main{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin-top: -90px;
-   }
-   .LoginForm {
-     background-color: rgba(255, 255, 255,);
-     box-shadow: 0px 8px 32px 0 rgba(33, 27, 87, 0.192);
-     backdrop-filter: blur(3px);
-     padding: 45px 40px 70px 40px;
-     border-radius: 5px;
-     width:350px;
-     height: 500px;
-    
-     }
-     .tablez{
-      width: 90%;
-    font-size: 10px;
-    margin-left: 5%;
-      }
+h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -45px;
+  color: darkblue;
+  letter-spacing: 2.8px;
+  margin-right: 5px;
+}
+h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 40px;
+}
 
-    }
-   
-    @media (max-width : 1500px )and (min-width: 1001px) {
-      .LoginForm {
-        background-color: rgba(255, 255, 255,);
-        box-shadow: 0px 8px 32px 0 rgba(33, 27, 87, 0.192);
-        backdrop-filter: blur(3px);
-        padding: 45px 40px 70px 40px;
-        border-radius: 5px;
-    
-        }
-      }
+.containerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.allwidth {
+  width: 270px;
+}
+
+.Btn4 {
+  display: flex;
+  justify-content: center;
+  margin-left: 37px;
+  max-width: 270px;
+  border-color: darkblue;
+  background-color: white;
+  color: darkblue;
+  margin-bottom: 13px;
+  width: 270px;
+}
+.fpass {
+  margin-top: 15px;
+}
+.Dropdrop {
+  margin-bottom: 10px;
+}
+.titlTable {
+  display: flex;
+  justify-content: center;
+}

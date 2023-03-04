@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavCss.css";
-import { Space, Popover } from "antd";
+import { Space, Popover, Divider } from "antd";
 import { useNavigate, Link } from "react-router-dom";
 import CardData from "./Data";
 import DropMenu from "./DropMenu";
@@ -19,62 +19,64 @@ const LandingPage = ({ token }) => {
   }
 
   return (
-    <div>
+    <div className="container1">
       <header>
-        <div className="leftNav">
-          <Popover
-            placement="bottomRight"
-            title="MEDVA"
-            content="Medical Virtual Assistant"
-          >
-            <Link to="/landing">
-              <h2>MEDVA</h2>
-            </Link>
-          </Popover>
-        </div>
-        <div className="rightNav">
-          <Space>
-            <DropMenu
-              phar={token.user.email}
-              imgSrc={logoo}
-              logout={handleLogout}
-            />
-          </Space>
+        <div className="container4">
+          <div className="leftNav">
+            <Popover
+              placement="bottomRight"
+              title="MEDVA"
+              content="Medical Virtual Assistant"
+            >
+              <Link to="/landing">
+                <h2 className="MedvaLogo">MEDVA</h2>
+              </Link>
+            </Popover>
+          </div>
+          <div className="rightNav">
+            <Space>
+              <DropMenu
+                phar={token.user.email}
+                imgSrc={logoo}
+                logout={handleLogout}
+              />
+            </Space>
+          </div>
         </div>
       </header>
-
-      <div>
-        <p className="Msg3">Hire the best Virtual Assistants</p>
-        <p className="Msg4">
+      <div className="containe1">
+        <p className="Msg1">Hire the best Virtual Assistants</p>
+        <p className="Msg2">
           Say goodbye to mundane tasks and welcome to the future - get your
           virtual assistant today!
         </p>
       </div>
 
-      <div className="Msg5">Which type of personnel do you need?</div>
-      <div className="SpaceHome ">
-        <Space>
-          <Cardsss title="Medical" />
-          <Cardsss title="Dental" />
-        </Space>
+      <div className=" container1 ">
+        <Cardsss title="Medical" />
+        <Cardsss title="Dental" />
       </div>
-      <div className="Msg5">Which type of personnel do you need?</div>
-      <div className="SpaceHome">
-        <div className="container">
-          <Cardsss title="Admin" />
-          <Cardsss title="Biller" />
 
-          <Cardsss title="Scribe" />
-          <Cardsss title="Receptionist" />
-        </div>
+      <div>
+        <h1 className="Msg6">Which type of personnel do you need?</h1>
       </div>
-      <p className="Msg2">
-        <b>Pick your future virtual assistant</b>
-      </p>
-      <div className="container">
-        <Space>
-          <ModalCards details={CardData} />
-        </Space>
+
+      <div className="container0">
+        <Cardsss title="Admin" />
+        <Cardsss title="Biller" />
+
+        <Cardsss title="Scribe" />
+        <Cardsss title="Receptionist" />
+      </div>
+      <Divider></Divider>
+      <div className="container9">
+        <div>
+          <h1 className="Msg8">Pick your future virtual assistant </h1>
+        </div>
+
+        <div className="container">
+          <ModalCards details={CardData} />{" "}
+        </div>
       </div>
     </div>
   );

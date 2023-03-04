@@ -55,85 +55,92 @@ const LoginDirect = ({ setToken }) => {
   }
 
   return (
-    <div className="main">
-      <Form className="LoginForm" onSubmitCapture={handleSubmit}>
-        <div>
+    <motion.div animate={{ y: -30 }}>
+      <div className="main">
+        <Form className="LoginForm" onSubmitCapture={handleSubmit}>
+          <div>
+            <Link to="/">
+              <Typography.Title>
+                <Popover placement="right" content="return to mainpage">
+                  <p className="welcome"> MEDVA</p>
+                </Popover>
+              </Typography.Title>
+              <h6>Medical Virtual Assistants</h6>
+            </Link>
+          </div>
+          <h5> Login you your Account</h5>
+          <div className="containerItem">
+            <Form.Item
+              rules={[
+                {
+                  required: true,
+                  message: "Please input a valid username.",
+                },
+              ]}
+              name="email"
+            >
+              <Input
+                className="allwidth"
+                onChange={handleChange}
+                prefix={<MailOutlined />}
+                placeholder="Your email address"
+                name="email"
+              />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your password.",
+                },
+                { min: 6 },
+              ]}
+            >
+              <Input.Password
+                className="allwidth"
+                onChange={handleChange}
+                placeholder="Your password"
+                prefix={<KeyOutlined />}
+                name="password"
+              />
+            </Form.Item>
+          </div>
+          <div className="BtnHead">
+            <Loadingbtn
+              className="Btn4"
+              title={"Log in"}
+              loading={loading}
+              onClick={() => {
+                setLoading(true);
+                setTimeout(() => {
+                  setLoading(false);
+                }, 2000);
+              }}
+            />
+
+            <Popover
+              placement="bottom"
+              content="Not working for the moment, use the Custom Log in."
+            >
+              <Button
+                disabled
+                size="medium"
+                className="Btn4"
+                onClick={signInWithGoogle}
+                block
+              >
+                <GooglePlusOutlined className="googlelogo" /> Log in using
+                google
+              </Button>
+            </Popover>
+          </div>
           <Link to="/">
-            <Typography.Title className="welcome" style={{ color: "darkblue" }}>
-              <Popover placement="right" content="return to mainpage">
-                MEDVA
-              </Popover>
-            </Typography.Title>
-            <h6>Medical Virtual Assistants</h6>
+            <center className="fpass">Forgot password?</center>
           </Link>
-        </div>
-        <h5> Login you your Account</h5>
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: "Please input a valid username.",
-            },
-          ]}
-          name="email"
-        >
-          <Input
-            className="allwidth"
-            onChange={handleChange}
-            prefix={<MailOutlined />}
-            placeholder="Your email address"
-            name="email"
-          />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please enter your password.",
-            },
-            { min: 6 },
-          ]}
-        >
-          <Input.Password
-            className="allwidth"
-            onChange={handleChange}
-            placeholder="Your password"
-            prefix={<KeyOutlined />}
-            name="password"
-          />
-        </Form.Item>
-
-        <Loadingbtn
-          title={"Log in"}
-          loading={loading}
-          onClick={() => {
-            setLoading(true);
-            setTimeout(() => {
-              setLoading(false);
-            }, 2000);
-          }}
-        />
-
-        <Popover
-          placement="bottom"
-          content="Not working for the moment, use the Custom Log in."
-        >
-          <Button
-            disabled
-            size="medium"
-            className="signupBtn "
-            onClick={signInWithGoogle}
-            block
-          >
-            <GooglePlusOutlined className="googlelogo" /> Log in using google
-          </Button>
-        </Popover>
-        <Link to="/">
-          <center className="fpass">Forgot password?</center>
-        </Link>
-      </Form>
-    </div>
+        </Form>
+      </div>
+    </motion.div>
   );
 };
 

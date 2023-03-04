@@ -5,40 +5,96 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 45px;
-
+  height: 65px;
+  width: 100%;
+  background-color: white;
   border-bottom-style: ridge;
   border-bottom-color: rgba(255, 255, 255, 0.507);
+  z-index: 1;
+  position: fixed;
+}
+.container4 {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 90%;
+  height: auto;
+  z-index: 1;
+  max-width: 1400px;
 }
 .leftNav {
-  margin: 10px 0px 10px 25px;
+  margin: 10px 0px 10px 0px;
   color: rgb(11, 11, 139);
 }
+.leftNav h2 {
+  margin: 10px 0px 10px 0px;
+  color: rgb(11, 11, 139);
+  font-size: 40px;
+  letter-spacing: 2px;
+}
 .rightNav {
-  margin: 10px 25px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+  margin-right: 15px;
 }
 .btn1 {
   color: rgba(14, 14, 139, 0.863);
   border-color: rgba(14, 14, 139, 0.863);
   font-weight: 10px;
+  width: 80px;
+  height: 32px;
+  margin-right: 6px;
+  font-size: 15px;
 }
+
 .btn2 {
   background-color: rgba(14, 14, 139, 0.863);
   color: white;
   font-weight: 10px;
+  width: 70px;
+  height: 32px;
+  font-size: 15px;
 }
+.Msg1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.Msg2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
 .profimage {
   border-radius: 100px;
-  width: 30px;
+  background-color: blue;
+  width: 40px;
   border-style: ridge;
   border-color: darkblue;
-  border-width: thin;
+  border-width: solid;
   margin-left: 3px;
+  margin-bottom: 20px;
+}
+.rspnsvName {
+  margin-bottom: 22px;
+  color: black;
+  font-size: small;
 }
 
 .logoutlogo {
@@ -49,11 +105,16 @@ header {
   backdrop-filter: blur(3px);
 }
 .lodBtn {
+  display: flex;
+  justify-content: center;
+  margin-left: 37px;
   border-style: solid;
   border-color: darkblue;
   background-color: darkblue;
   color: white;
   margin-bottom: 13px;
+  width: 270px;
+  margin-top: 4px;
 }
 .lodBtn:hover {
   border-style: solid;
@@ -62,7 +123,25 @@ header {
   color: white;
   margin-bottom: 13px;
 }
+.container0 {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+
+  flex-flow: wrap;
+}
+.Msg6 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: normal;
+}
 .Clickme {
+  position: absolute;
+
   color: white;
   background-color: darkblue;
 }
@@ -75,26 +154,10 @@ header {
   letter-spacing: 1px;
 }
 
-.Msg1 {
-  margin-top: 40px;
-
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-}
-.Msg2 {
-  margin-top: 20px;
-  margin-bottom: 60px;
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-}
 .Tablef {
   margin-top: 50px;
 }
-.leftproject {
-  column-width: 300px;
-}
+
 .AppointLogo {
   margin-top: 40px;
   display: flex;
@@ -110,290 +173,188 @@ header {
   position: fixed;
 }
 
-@media (max-width: 600px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45px;
-    width: 100%;
-    border-bottom-style: ridge;
-    border-bottom-color: rgba(255, 255, 255, 0.507);
-  }
-  .profimage {
-    border-radius: 100px;
-    width: 30px;
-    border-style: ridge;
-    border-color: darkblue;
-    border-width: thin;
-    margin-left: 3px;
-    margin-top: 11px;
-  }
-  .InvoicesName {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-  .Msg1 {
-    margin-top: 40px;
-
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-  }
-  .Msg2 {
-    margin-top: 20px;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-  }
-  .leftproject {
-    column-width: 300px;
-    font-size: 10px;
-  }
-  .wholecards {
-    display: flex;
-    justify-content: center;
-  }
-  .cardsprops img {
-    width: 65px;
-  }
-  .cardsprops {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-  .cardsprops p {
-    margin-top: 2px;
-    font-size: 15px;
-    font-weight: bold;
-  }
-
-  .cardsprops:hover {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.685);
-    background-color: rgba(50, 50, 138, 0.048);
-    transition-duration: 2s;
-    box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
-    backdrop-filter: blur(3px);
-
-    margin-top: 20px;
-  }
-  .active {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.685);
-    background-color: rgba(50, 50, 138, 0.048);
-    transition-duration: 2s;
-    box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
-    backdrop-filter: blur(3px);
-    transform: scale(1.03);
-  }
-  .inactive {
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-
-  .Checkcard {
-    color: darkblue;
-
-    margin-left: 80px;
-
-    transition-delay: 0.2s;
-  }
-  .inCheckcard {
-    color: white;
-    transition-delay: 0.3s;
-    z-index: -1;
-    margin-left: 80px;
-  }
-  .SpaceHome {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .Msg5 {
-    display: flex;
-    justify-content: center;
-    font-size: smaller;
-    font-weight: lighter;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-
-    flex-flow: wrap;
-    margin-bottom: 10px;
-  }
+.InvoicesName {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
-@media (min-width: 1001px) {
-  .LoginForm {
-    background-color: rgba(255, 255, 255);
-    box-shadow: 0px 8px 32px 0 rgba(33, 27, 87, 0.192);
-    backdrop-filter: blur(3px);
-    padding: 45px 40px 70px 40px;
-    border-radius: 5px;
-  }
-  .wholecards {
-    display: flex;
-    justify-content: center;
-  }
-  .cardsprops img {
-    margin-top: 10px;
-    width: 150px;
-  }
-
-  .cardsprops p {
-    margin-top: 2px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .wholecards {
-    display: flex;
-    justify-content: center;
-  }
-  .cardsprops img {
-    margin-top: 10px;
-    width: 150px;
-  }
-  .cardsprops {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-  .cardsprops p {
-    margin-top: 2px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .cardsprops img {
-    width: 70px;
-  }
-  .cardsprops {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-  .cardsprops p {
-    width: 130px;
-    height: 170px;
-    font-weight: bold;
-  }
-  .cardsprops:hover {
-    border-color: rgba(0, 0, 255, 0.685);
-    background-color: rgba(50, 50, 138, 0.048);
-    transition-duration: 2s;
-    box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
-    backdrop-filter: blur(3px);
-    transform: scale(1.03);
-  }
-
-  .active {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.685);
-    background-color: rgba(50, 50, 138, 0.048);
-    transition-delay: 0.2s;
-    box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
-    backdrop-filter: blur(3px);
-    transform: scale(1.03);
-  }
-  .inactive {
-    text-align: center;
-    width: 200px;
-    height: 300px;
-    border-color: rgba(0, 0, 255, 0.055);
-    margin: 10px;
-    margin-top: 20px;
-  }
-
-  .Checkcard {
-    color: darkblue;
-
-    margin-left: 80px;
-
-    transition-delay: 0.2s;
-  }
-  .inCheckcard {
-    color: white;
-    transition-delay: 0.3s;
-    margin-left: 80px;
-  }
-  .SpaceHome {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .Msg5 {
-    display: flex;
-    justify-content: center;
-    font-size: smaller;
-    font-weight: lighter;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-
-    flex-flow: wrap;
-    margin-bottom: 10px;
-  }
+.leftproject {
+  column-width: 300px;
+  font-size: 10px;
 }
-.Msg3 {
-  margin-top: 40px;
-
+.wholecards {
+  display: flex;
+  justify-content: center;
+}
+.cardsprops img {
+  width: 160px;
+  margin-top: 30px;
+}
+.cardsprops {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 30px;
+  width: 330px;
+  height: 330px;
+  border-color: rgb(44, 50, 145);
+  margin: 10px;
+  margin-top: 20px;
+}
+.cardsprops p {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cardsprops:hover {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 330px;
+  height: 330px;
+  border-color: rgb(44, 50, 145);
+  background-color: rgba(50, 50, 138, 0.048);
+  transition-duration: 1s;
+
+  margin-top: 20px;
+}
+.active {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 330px;
+  height: 330px;
+  border-color: rgb(44, 50, 145);
+  background-color: rgba(50, 50, 138, 0.048);
+  transition-duration: 1s;
+  box-shadow: 0px 8px 32px 0 rgba(50, 40, 148, 0.397);
+  backdrop-filter: blur(3px);
+}
+.inactive {
+  text-align: center;
+  width: 330px;
+  height: 330px;
+  border-color: rgba(0, 0, 255, 0.055);
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.Checkcard {
+  display: flex;
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  color: darkblue;
+  transition-delay: 0.2s;
+  font-size: 20px;
+}
+.inCheckcard {
+  display: flex;
+  position: absolute;
+  right: 24px;
+  top: 16px;
+  color: white;
+  transition-delay: 0.2s;
+  font-size: 1px;
+}
+.SpaceHome {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.Msg5 {
+  display: flex;
+  justify-content: center;
+  font-size: smaller;
+  font-weight: lighter;
+}
+.Msg8 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: cen;
+  margin-bottom: 40px;
+  font-size: 25px;
   font-weight: bold;
 }
-.Msg4 {
-  margin-top: 20px;
 
+.container1 {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+
+  flex-flow: wrap;
+  margin-bottom: 10px;
+}
+.container3 {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1400px;
+}
+.ontainer9 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+.InvoicesMsg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.Msg9 {
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.Msg10 {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
   font-size: 14px;
+}
+.Msg11 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .rspnsvName {
+    color: white;
+  }
+  .profimage {
+    margin-right: 40px;
+  }
 }

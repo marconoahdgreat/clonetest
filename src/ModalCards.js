@@ -34,6 +34,7 @@ const ModalCards = (props) => {
       >
         <p></p>
       </Modal>
+
       <div className="modalhead">
         {props.details.map((value, index) => (
           <Space>

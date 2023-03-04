@@ -52,83 +52,88 @@ function SignupPage() {
   }
 
   return (
-    <div className="main">
-      <Form className="LoginForm" onSubmitCapture={handleSubmit}>
-        {" "}
-        <Notif />
-        <div>
-          <Link to="/">
-            <Typography.Title className="welcome" style={{ color: "darkblue" }}>
-              MEDVA
-            </Typography.Title>
-            <h6>Medical Virtual Assistants</h6>
-          </Link>
-        </div>
-        <h5> Sign up now.</h5>
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: "Please input a valid username.",
-            },
-          ]}
-          name="email"
-        >
-          <Input
-            className="allwidth"
-            onChange={handleChange}
-            prefix={<MailOutlined />}
-            placeholder="Your email address"
-            name="email"
+    <motion.div animate={{ y: -30 }}>
+      <div className="main">
+        <Form className="LoginForm" onSubmitCapture={handleSubmit}>
+          {" "}
+          <Notif />
+          <div>
+            <Link to="/">
+              <Typography.Title style={{ color: "darkblue" }}>
+                <p className="welcome"> MEDVA</p>
+              </Typography.Title>
+              <h6>Medical Virtual Assistants</h6>
+            </Link>
+          </div>
+          <h5> Sign up now.</h5>
+          <div className="containerItem">
+            <Form.Item
+              rules={[
+                {
+                  required: true,
+                  message: "Please input a valid username.",
+                },
+              ]}
+              name="email"
+            >
+              <Input
+                className="allwidth"
+                onChange={handleChange}
+                prefix={<MailOutlined />}
+                placeholder="Your email address"
+                name="email"
+              />
+            </Form.Item>
+
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your password.",
+                },
+                { min: 6 },
+              ]}
+            >
+              <Input.Password
+                className="allwidth"
+                onChange={handleChange}
+                placeholder="Your password"
+                prefix={<KeyOutlined />}
+                name="password"
+              />
+            </Form.Item>
+          </div>
+          <Loadingbtn
+            title={"Sign up"}
+            loading={loading}
+            onClick={() => {
+              setLoading(true);
+              setTimeout(() => {
+                setLoading(false);
+              }, 2000);
+            }}
           />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please enter your password.",
-            },
-            { min: 6 },
-          ]}
-        >
-          <Input.Password
-            className="allwidth"
-            onChange={handleChange}
-            placeholder="Your password"
-            prefix={<KeyOutlined />}
-            name="password"
-          />
-        </Form.Item>
-        <Loadingbtn
-          title={"Sign up"}
-          loading={loading}
-          onClick={() => {
-            setLoading(true);
-            setTimeout(() => {
-              setLoading(false);
-            }, 2000);
-          }}
-        />
-        <Popover
-          placement="bottom"
-          content="Not working for the moment , Sign up using Email and Password."
-        >
-          <Button
-            disabled
-            size="medium"
-            className="signupBtn "
-            onClick={signInWithGoogle}
-            block
+          <Popover
+            placement="bottom"
+            content="Not working for the moment , Sign up using Email and Password."
           >
-            <GooglePlusOutlined className="googlelogo" /> Log in using google
-          </Button>
-        </Popover>
-        <Link to="/">
-          <center className="fpass">Forgot password?</center>
-        </Link>
-      </Form>
-    </div>
+            <Button
+              disabled
+              size="medium"
+              className="Btn4 "
+              onClick={signInWithGoogle}
+              block
+            >
+              <GooglePlusOutlined className="googlelogo" /> Log in using google
+            </Button>
+          </Popover>
+          <Link to="/">
+            <center className="fpass">Forgot password?</center>
+          </Link>
+        </Form>
+      </div>{" "}
+    </motion.div>
   );
 }
 

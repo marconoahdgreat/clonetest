@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavCss.css";
-import { Button, Popover, Space } from "antd";
+import { Button, Divider, Popover, Space } from "antd";
 import { Link } from "react-router-dom";
 import Cardsss from "./Cardsss";
 import ModalCards from "./ModalCards";
@@ -8,56 +8,64 @@ import CardData from "./Data.js";
 
 function Homepage() {
   return (
-    <div>
+    <div className="container1">
       <header>
-        <div className="leftNav">
-          <Popover placement="bottom" content="Your Medical Virtual Assistant">
-            <h2>MEDVA</h2>
-          </Popover>
-        </div>
-        <div className="rightNav">
-          <Space>
+        <div className="container4">
+          <div className="leftNav ">
+            <Popover
+              placement="bottom"
+              content="Your Medical Virtual Assistant"
+            >
+              <h2 className="MedvaLogo">MEDVA</h2>
+            </Popover>
+          </div>
+          <div className="rightNav">
             <Link to="/signup">
               <Button size="medium" className="btn1">
-                <h5>Signup</h5>
+                <p>Signup</p>
               </Button>
             </Link>
             <Link to="/Login">
               <Button size="medium" className="btn2">
-                <h5>Login</h5>
+                <p>Login</p>
               </Button>{" "}
             </Link>
-          </Space>
+          </div>
         </div>
       </header>
-      <div>
-        <p className="Msg3">Hire the best Virtual Assistants</p>
-        <p className="Msg4">
+      <div className="containe1">
+        <p className="Msg1">Hire the best Virtual Assistants</p>
+        <p className="Msg2">
           Say goodbye to mundane tasks and welcome to the future - get your
           virtual assistant today!
         </p>
       </div>
 
-      <div className="SpaceHome ">
-        <Space>
-          <Cardsss title="Medical" />
-          <Cardsss title="Dental" />
-        </Space>
+      <div className=" container1 ">
+        <Cardsss title="Medical" />
+        <Cardsss title="Dental" />
       </div>
-      <div className="Msg5">Which type of personnel do you need?</div>
-      <div className="SpaceHome">
-        <div className="container">
-          <Cardsss title="Admin" />
-          <Cardsss title="Biller" />
 
-          <Cardsss title="Scribe" />
-          <Cardsss title="Receptionist" />
-        </div>
+      <div>
+        <h1 className="Msg6">Which type of personnel do you need?</h1>
       </div>
-      <div className="container">
-        <space>
-          <ModalCards details={CardData} />
-        </space>
+
+      <div className="container0">
+        <Cardsss title="Admin" />
+        <Cardsss title="Biller" />
+
+        <Cardsss title="Scribe" />
+        <Cardsss title="Receptionist" />
+      </div>
+      <Divider></Divider>
+      <div className="container9">
+        <div>
+          <h1 className="Msg8">Pick your future virtual assistant </h1>
+        </div>
+
+        <div className="container">
+          <ModalCards details={CardData} />{" "}
+        </div>
       </div>
     </div>
   );
