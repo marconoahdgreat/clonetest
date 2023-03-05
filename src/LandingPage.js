@@ -62,7 +62,7 @@ const LandingPage = ({ token }) => {
       </div>
 
       <div className="container0">
-        <Cardsss title="Admin" />
+        <Cardsss className="cardClass" title="Admin" />
         <Cardsss title="Biller" />
 
         <Cardsss title="Scribe" />

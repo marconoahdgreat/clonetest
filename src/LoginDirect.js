@@ -46,7 +46,7 @@ const LoginDirect = ({ setToken }) => {
     }
   };
 
-  async function signInWithGoogle() {
+  async function signInWithGoogle(event) {
     //eslint-disable-next-line
     const { data, session, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
