@@ -8,16 +8,7 @@ import Cardsss from "./Cardsss";
 import logoo from "./images/logoo.webp";
 import ModalCards from "./ModalCards";
 
-const LandingPage = ({ token }) => {
-  let navigate = useNavigate();
-
-  function handleLogout() {
-    sessionStorage.removeItem("token");
-    navigate("/Login");
-
-    window.location.reload();
-  }
-
+const LandingPage = () => {
   return (
     <div className="container1">
       <header>
@@ -33,15 +24,7 @@ const LandingPage = ({ token }) => {
               </Link>
             </Popover>
           </div>
-          <div className="rightNav">
-            <Space>
-              <DropMenu
-                phar={token.user.email}
-                imgSrc={logoo}
-                logout={handleLogout}
-              />
-            </Space>
-          </div>
+          <div className="rightNav"></div>
         </div>
       </header>
       <div className="containe1">

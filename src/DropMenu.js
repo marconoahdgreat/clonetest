@@ -16,7 +16,7 @@ const DropMenu = (props) => {
   const items = [
     {
       icon: <SearchOutlined />,
-      label: <div onClick={() => navigate("/landing")}>Find VAs</div>,
+      label: <div onClick={() => navigate("/success")}>Find VAs</div>,
       key: "1",
     },
     {

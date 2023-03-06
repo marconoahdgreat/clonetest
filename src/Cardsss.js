@@ -14,7 +14,7 @@ function Cardsss(props) {
 
   return (
     <motion.div animate={{ y: -30 }}>
-      <div>
+      <div className="cardCSS">
         <Card
           className={active ? "cardsprops active " : "cardsprops inactive "}
           onClick={handleOnClick}

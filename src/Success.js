@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Space, Popover, Button } from "antd";
-import DropMenu from "./DropMenu";
+import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./NavCss.css";
-import TableF from "./TableF";
-import { motion } from "framer-motion";
-import Login from "./LoginDirect";
 import { createClient } from "@supabase/supabase-js";
+import { Button, Popover, Divider, Space } from "antd";
+import Cardsss from "./Cardsss";
+import DropMenu from "./DropMenu";
+import ModalCards from "./ModalCards";
+import CardData from "./Data";
+import Login from "./LoginDirect";
 
 const supabase = createClient(
   "https://bvczchgshbalfaskstlf.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2Y3pjaGdzaGJhbGZhc2tzdGxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzczOTY1NzcsImV4cCI6MTk5Mjk3MjU3N30.l8fzd8VbPe31q453tV-emJ89zxfBJUQDl_HubpaUkaQ"
 );
-const Invoices = () => {
+
+function Success() {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
 
@@ -60,29 +61,46 @@ const Invoices = () => {
               </div>
             </div>
           </header>
-          <motion.div animate={{ y: -30 }}>
-            <div className="Msg9">Invoices</div>
-            <div className="InvoicesMsg">
-              <div className="Msg7">
-                <p>
-                  Our convenient system allows you to quickly view your invoices
-                  and manage them in one place.
-                </p>
-              </div>
-              <div className="Msg10">
-                Keep track of your payments, and upcoming bills with ease.
-              </div>
+          <div className="containe1">
+            <p className="Msg1">Hire the best Virtual Assistants</p>
+            <p className="Msg2">
+              Say goodbye to mundane tasks and welcome to the future - get your
+              virtual assistant today!
+            </p>
+          </div>
+
+          <div className=" container1 ">
+            <Cardsss title="Medical" />
+            <Cardsss title="Dental" />
+          </div>
+
+          <div>
+            <h1 className="Msg6">Which type of personnel do you need?</h1>
+          </div>
+
+          <div className="container0">
+            <Cardsss className="cardClass" title="Admin" />
+            <Cardsss title="Biller" />
+
+            <Cardsss title="Scribe" />
+            <Cardsss title="Receptionist" />
+          </div>
+          <Divider></Divider>
+          <div className="container9">
+            <div>
+              <h1 className="Msg8">Pick your future virtual assistant </h1>
             </div>
-            <div className="Tablef">
-              <TableF />
+
+            <div className="container">
+              <ModalCards details={CardData} />{" "}
             </div>
-          </motion.div>
+          </div>
         </div>
       ) : (
         <Login />
       )}
     </div>
   );
-};
+}
 
-export default Invoices;
+export default Success;
