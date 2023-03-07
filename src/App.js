@@ -5,7 +5,7 @@ import Login from "./LoginDirect";
 import Homepage from "./Homepage";
 import Invoices from "./Invoices";
 import Appointment from "./Appointment";
-import PrivateRoutes from "./PrivateRoutes";
+
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
@@ -29,12 +29,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route element={<PrivateRoutes />}>
-          <Route path="/success" element={<Success user={user} />} />
-          <Route path="/invoices" element={<Invoices user={user} />} />
+        <Route path="/success" element={<Success user={user} />} />
+        <Route path="/invoices" element={<Invoices user={user} />} />
 
-          <Route path="/appoint" element={<Appointment user={user} />} />
-        </Route>
+        <Route path="/appoint" element={<Appointment user={user} />} />
 
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/" element={<Login />} />
