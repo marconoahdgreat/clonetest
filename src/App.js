@@ -9,13 +9,13 @@ function App() {
   return (
     <div>
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route path="/success" element={<Success />} />
         <Route path="/invoices" element={<Invoices />} />
 
         <Route path="/appoint" element={<Appointment />} />
 
         <Route path="/homepage" element={<Homepage />} />
-        <Route path="/" element={<Login />} />
       </Routes>
     </div>
   );

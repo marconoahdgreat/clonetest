@@ -26,39 +26,6 @@ const Login = () => {
           supabaseClient={supabase}
           appearance={{
             theme: ThemeSupa,
-            variables: {
-              default: {
-                colors: {
-                  brand: "darkblue",
-                  brandAccent: "blue",
-                  brandButtonText: "white",
-                  defaultButtonBackground: "white",
-
-                  defaultButtonBackgroundHover: "pearl",
-                  defaultButtonBorder: "darkblue",
-                  defaultButtonText: "darkblue",
-                  dividerBackground: "#eaeaea",
-                  inputBackground: "transparent",
-                  inputBorder: "lightgray",
-                  inputText: "black",
-                  inputPlaceholder: "darkgray",
-                  inputLabelText: "white",
-                  inputBorderHover: "darkblue",
-                  inputBorderFocus: "darkblue",
-                },
-                radii: {
-                  borderRadiusButton: "6px",
-                  buttonBorderRadius: "6px",
-                  inputBorderRadius: "6px",
-                  anchorTextHoverColor: "darkblue",
-                },
-                space: {
-                  labelBottomMargin: "",
-                  inputPadding: "9px",
-                  buttonPadding: "8px",
-                },
-              },
-            },
           }}
           providers={["google"]}
         />
