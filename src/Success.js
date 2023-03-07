@@ -39,7 +39,7 @@ const Success = ({ user }) => {
               </div>
               <div className="rightNav2">
                 <DropMenu
-                  phar={user.user_metadata.name}
+                  phar={user.user_metadata.full_name}
                   imgSrc={user.user_metadata.picture}
                   logout={signOutUser}
                 />
