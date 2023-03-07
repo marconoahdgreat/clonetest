@@ -31,7 +31,7 @@ header {
   color: rgb(11, 11, 139);
 }
 .leftNav h2 {
-  margin: 10px 0px 10px 0px;
+  margin: 22px 0px 10px 0px;
   color: rgb(11, 11, 139);
   font-size: 40px;
   letter-spacing: 2px;
@@ -41,6 +41,28 @@ header {
   justify-content: center;
   align-content: center;
   margin-top: 30px;
+  margin-right: 15px;
+}
+.leftNav1 h2 {
+  margin: 22px 0px 22px 0.6px;
+  color: rgb(11, 11, 139);
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.leftNav1 {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0px 10px 0px;
+  color: rgb(11, 11, 139);
+
+  letter-spacing: 2px;
+}
+.rightNav2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 46px;
   margin-right: 15 px;
 }
 @media (max-width: 400px) {
@@ -58,9 +80,7 @@ header {
     height: 32px;
     font-size: 15px;
   }
-  .container4 {
-    width: 95%;
-  }
+
   .leftNav {
     margin: 10px 0px 10px 10px;
     color: rgb(11, 11, 139);
@@ -88,7 +108,7 @@ header {
 .Msg1 {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 200px;
   text-align: center;
   font-size: 28px;
   font-weight: bolder;
@@ -363,6 +383,7 @@ header {
   justify-content: center;
   font-size: 14px;
 }
+
 @media (max-width: 500px) {
   .rspnsvName {
     color: white;
@@ -373,7 +394,7 @@ header {
 .Authcss1 {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 50px;
   width: 100%;
 }
 .Authcss {
@@ -381,5 +402,6 @@ header {
   justify-content: center;
   border-style: ridge;
   width: 300px;
-  border-color: rgba(0, 0, 139, 0.041);
+  border-color: rgba(0, 0, 0, 0.034);
+  border-radius: 10px;
 }

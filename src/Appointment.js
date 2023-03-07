@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Space, Popover, Card, Button } from "antd";
+import { Space, Popover, Card } from "antd";
 import DropMenu from "./DropMenu";
 import { useNavigate, Link } from "react-router-dom";
 import "./NavCss.css";
-import { ScheduleOutlined } from "@ant-design/icons";
+
 import logo from "./images/appoints.png";
 import { motion } from "framer-motion";
-import logoo from "./images/logoo.webp";
+
 import { createClient } from "@supabase/supabase-js";
 import Login from "./LoginDirect";
 
@@ -15,20 +15,8 @@ const supabase = createClient(
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2Y3pjaGdzaGJhbGZhc2tzdGxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzczOTY1NzcsImV4cCI6MTk5Mjk3MjU3N30.l8fzd8VbPe31q453tV-emJ89zxfBJUQDl_HubpaUkaQ"
 );
 
-const Appointment = () => {
-  const [user, setUser] = useState({});
+const Appointment = ({ user }) => {
   const navigate = useNavigate();
-  useEffect(() => {
-    async function getUserData() {
-      await supabase.auth.getUser().then((value) => {
-        if (value.data?.user) {
-          console.log(value.data.user);
-          setUser(value.data.user);
-        }
-      });
-    }
-    getUserData();
-  }, []);
   async function signOutUser() {
     const { error } = await supabase.auth.signOut();
     navigate("/homepage");
@@ -46,9 +34,7 @@ const Appointment = () => {
                   title="MEDVA"
                   content="Medical Virtual Assistant"
                 >
-                  <Link to="/landing">
-                    <h2 className="MedvaLogo">MEDVA</h2>
-                  </Link>
+                  <h2 className="MedvaLogo">MEDVA</h2>
                 </Popover>
               </div>
               <div className="rightNav">
@@ -86,7 +72,7 @@ const Appointment = () => {
           </motion.div>
         </div>
       ) : (
-        <Login />
+        ""
       )}
     </div>
   );

@@ -1,11 +1,11 @@
 import React from "react";
 import "./NavCss.css";
-import { Space, Popover, Divider } from "antd";
-import { useNavigate, Link } from "react-router-dom";
+import { Popover, Divider } from "antd";
+import { Link } from "react-router-dom";
 import CardData from "./Data";
-import DropMenu from "./DropMenu";
+
 import Cardsss from "./Cardsss";
-import logoo from "./images/logoo.webp";
+
 import ModalCards from "./ModalCards";
 
 const LandingPage = () => {

@@ -5,28 +5,15 @@ import { useNavigate, Link } from "react-router-dom";
 import "./NavCss.css";
 import TableF from "./TableF";
 import { motion } from "framer-motion";
-import Login from "./LoginDirect";
+
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   "https://bvczchgshbalfaskstlf.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2Y3pjaGdzaGJhbGZhc2tzdGxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzczOTY1NzcsImV4cCI6MTk5Mjk3MjU3N30.l8fzd8VbPe31q453tV-emJ89zxfBJUQDl_HubpaUkaQ"
 );
-const Invoices = () => {
-  const [user, setUser] = useState({});
+const Invoices = ({ user }) => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    async function getUserData() {
-      await supabase.auth.getUser().then((value) => {
-        if (value.data?.user) {
-          console.log(value.data.user);
-          setUser(value.data.user);
-        }
-      });
-    }
-    getUserData();
-  }, []);
   async function signOutUser() {
     const { error } = await supabase.auth.signOut();
     navigate("/homepage");
@@ -44,9 +31,7 @@ const Invoices = () => {
                   title="MEDVA"
                   content="Medical Virtual Assistant"
                 >
-                  <Link to="/landing">
-                    <h2 className="MedvaLogo">MEDVA</h2>
-                  </Link>
+                  <h2 className="MedvaLogo">MEDVA</h2>
                 </Popover>
               </div>
               <div className="rightNav">
@@ -79,7 +64,7 @@ const Invoices = () => {
           </motion.div>
         </div>
       ) : (
-        <Login />
+        <div>""</div>
       )}
     </div>
   );
