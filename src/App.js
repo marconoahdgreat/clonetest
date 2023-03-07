@@ -1,4 +1,3 @@
-import Reac, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Success from "./Success";
 import Login from "./LoginDirect";
@@ -17,7 +16,6 @@ function App() {
 
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/" element={<Login />} />
-        <Route path="*" element={<Login />} />
       </Routes>
     </div>
   );

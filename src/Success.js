@@ -7,6 +7,7 @@ import DropMenu from "./DropMenu";
 import ModalCards from "./ModalCards";
 import CardData from "./Data";
 import Login from "./LoginDirect";
+
 import { motion } from "framer-motion";
 
 const supabase = createClient(
@@ -93,7 +94,7 @@ const Success = () => {
           </motion.div>
         </div>
       ) : (
-        ""
+        <Login />
       )}
     </div>
   );
