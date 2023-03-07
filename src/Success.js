@@ -14,12 +14,24 @@ const supabase = createClient(
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2Y3pjaGdzaGJhbGZhc2tzdGxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzczOTY1NzcsImV4cCI6MTk5Mjk3MjU3N30.l8fzd8VbPe31q453tV-emJ89zxfBJUQDl_HubpaUkaQ"
 );
 
-const Success = ({ user }) => {
+const Success = () => {
+  const [user, setUser] = useState({});
   const navigate = useNavigate();
+  useEffect(() => {
+    async function getUserData() {
+      await supabase.auth.getUser().then((value) => {
+        if (value.data?.user) {
+          console.log(value.data.user);
+          setUser(value.data.user);
+        }
+      });
+    }
+    getUserData();
+  }, []);
 
   async function signOutUser() {
     const { error } = await supabase.auth.signOut();
-    navigate("/homepage");
+    navigate("/");
   }
 
   return (
