@@ -94,7 +94,7 @@ const Success = () => {
           </motion.div>
         </div>
       ) : (
-        <Login />
+        ""
       )}
     </div>
   );
