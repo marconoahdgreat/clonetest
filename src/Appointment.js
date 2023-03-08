@@ -51,11 +51,7 @@ const Appointment = () => {
               </div>
               <div className="rightNav">
                 <Space>
-                  <DropMenu
-                    phar={user.user_metadata.full_name}
-                    imgSrc={user.user_metadata.picture}
-                    logout={signOutUser}
-                  />
+                  <DropMenu logout={signOutUser} />
                 </Space>
               </div>
             </div>

@@ -58,8 +58,7 @@ const DropMenu = (props) => {
     >
       <a onClick={(e) => e.preventDefault()}>
         <Space>
-          <p className="rspnsvName">Welcome, {props.phar}</p>
-          <img className="profimage" src={props.imgSrc} />
+          <p className="rspnsvName">Welcome,Back... </p>
         </Space>
       </a>
     </Dropdown>
